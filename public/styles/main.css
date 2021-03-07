@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    font-size: 10px;
+    --color-teal: #40979B;
+    --color-grey: #AEB0AD;
+    --color-orange: #F06134;
+    --color-salmon: #FFD2AA;
+    --color-yellow: #FAF6A7;
+}
