@@ -14,5 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('base');
+    return view('layout.base');
+});
+Route::get('/lista', function () {
+    return view('layout.item.list');
 });

@@ -1,7 +1,7 @@
 @import url('../main.css');
 
 header{
-    background-color: var(--color-salmon);
+    background-color: var(--color-yellow);
     text-align: center;
     min-height: 8rem;
     color: var(--color-orange);
