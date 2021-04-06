@@ -1,0 +1,25 @@
+.back-add i{
+    font-size: 4rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+fieldset{
+    width: 50%;
+}
+
+fieldset legend{
+    font-size: 2.4rem;
+}
+
+fieldset label, .form-control{
+    font-size: 1.6rem;
+}
+
+form button i{
+    font-size: 2rem;
+}

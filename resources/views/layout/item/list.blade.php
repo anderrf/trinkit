@@ -18,7 +18,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Miniaturas</a>
                     </li>
-                    <li class="nav-item"><a href="" class="nav-link"><i class="bi bi-plus"></i></a></li>
+                    <li class="nav-item"><a href="/adicionar/categoria" class="nav-link"><i class="bi bi-plus"></i></a></li>
                 </ul>
             </aside>
         </div>
@@ -35,7 +35,7 @@
                     </div>
                 </div>
                 <div class="card add-card">
-                    <a href="#">
+                    <a href="/adicionar/objeto">
                         <i class="bi bi-plus"></i>
                     </a>
                 </div>

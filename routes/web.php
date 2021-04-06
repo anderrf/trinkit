@@ -13,9 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('layout.base');
-});
+Route::redirect('/', '/lista');
+
 Route::get('/lista', function () {
     return view('layout.item.list');
+});
+
+Route::prefix('adicionar')->group(function () {
+
+    Route::redirect('/', '/');
+
+    Route::get('/objeto', function () {
+        return view('layout.item.addType.object');
+    });
+
+    Route::get('/categoria', function () {
+        return view('layout.item.addType.category');
+    });
 });
