@@ -1,7 +1,7 @@
 @extends('layout.item.add')
 
 @section('addType')
-    <form action="" method="POST">
+    <form action=" {{ route('saveCategory') }} " method="POST">
         {{ csrf_field() }}
         <fieldset>
             <legend>Cadastre uma nova categoria</legend>

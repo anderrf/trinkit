@@ -17,13 +17,22 @@ Route::redirect('/', '/lista');
 
 Route::get('/lista', function () {
     return view('layout.item.list');
-});
+})->name('list');
 
 Route::prefix('adicionar')->group(function () {
 
     Route::redirect('/', '/');
 
-    Route::get('/objeto', 'App\Http\Controllers\ObjectController@addObject');
+    Route::get('/objeto', 'App\Http\Controllers\ObjectController@addObject')->name('addObject');
 
-    Route::get('/categoria', 'App\Http\Controllers\CategoryController@addCategory');
+    Route::get('/categoria', 'App\Http\Controllers\CategoryController@addCategory')->name('addCategory');
+
+});
+
+Route::prefix('salvar')->group(function(){
+
+    Route::post('/objeto', 'App\Http\Controllers\ObjectController@saveObject')->name('saveObject');
+
+    Route::post('/categoria', 'App\Http\Controllers\CategoryController@saveCategory')->name('saveCategory');
+
 });
