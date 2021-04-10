@@ -1,7 +1,8 @@
 @extends('layout.item.add')
 
 @section('addType')
-    <form action="">
+    <form action="" method="POST">
+        {{ csrf_field() }}
         <fieldset>
             <legend>Cadastre um novo objeto</legend>
             <div class="row mb-3">

@@ -23,11 +23,7 @@ Route::prefix('adicionar')->group(function () {
 
     Route::redirect('/', '/');
 
-    Route::get('/objeto', function () {
-        return view('layout.item.addType.object');
-    });
+    Route::get('/objeto', 'App\Http\Controllers\ObjectController@addObject');
 
-    Route::get('/categoria', function () {
-        return view('layout.item.addType.category');
-    });
+    Route::get('/categoria', 'App\Http\Controllers\CategoryController@addCategory');
 });
