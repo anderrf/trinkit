@@ -8,7 +8,12 @@
             <div class="row mb-3">
                 <div class="col">
                     <label for="categoryName" class="form-label">Nome:</label>
-                    <input type="text" class="form-control" name="categoryName" id="categoryName" minlength="3" maxlength="20">
+                    <input type="text" class="form-control" name="categoryName" id="categoryName">
+                    @if($errors->has('categoryName'))
+                        @foreach($errors->get('categoryName') as $error)
+                            <strong class="errorMessage">{{ $error }}</strong>
+                        @endforeach
+                    @endif
                 </div>
             </div>
         </fieldset>

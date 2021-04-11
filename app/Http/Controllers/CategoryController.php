@@ -13,6 +13,9 @@ class CategoryController extends Controller
 
     public function saveCategory(Request $request)
     {
+        $request->validate([
+            "categoryName" => "required|min:3|max:255"
+        ]);
         dd($request->all());
     }
 }
