@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
+use DB;
 
 class CategoryModel extends Model
 {
@@ -23,10 +25,10 @@ class CategoryModel extends Model
 
     public static function addCategory(Request $request)
     {
-        $sql = self::insert([
+        //DB::enableQueryLog();
+        return $sql = self::insert([
             "nm_Category" => $request->input('categoryName')
         ]);
-
-        dd($sql->toSql(), $request->all());
+        //dd(DB::getQueryLog());
     }
 }

@@ -31,8 +31,18 @@ Route::prefix('adicionar')->group(function () {
 
 Route::prefix('salvar')->group(function(){
 
+    Route::redirect('/', '/');
+
     Route::post('/objeto', 'App\Http\Controllers\ObjectController@saveObject')->name('saveObject');
 
     Route::post('/categoria', 'App\Http\Controllers\CategoryController@saveCategory')->name('saveCategory');
 
 });
+
+Route::get('/erro', function () {
+    return view('layout.item.addType.result');
+})->name('error');
+
+Route::get('/sucesso', function () {
+    return view('layout.item.addType.result');
+})->name('success');

@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
+use DB;
 
 class ObjectModel extends Model
 {
@@ -28,8 +30,8 @@ class ObjectModel extends Model
         $sql = self::insert([
             "nm_Object" => $request->input('objectName'),
             "yy_Object" => $request->input('objectYear'),
-            "ds_ObjectPhoto" => $request->input('objectPhoto')
-
+            "ds_ObjectPhoto" => $request->input('objectPhoto')/*,
+            "id_Category" => $request->input('categoryId')*/
         ]);
 
         dd($sql->toSql(), $request->all());

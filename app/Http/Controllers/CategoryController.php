@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\CategoryModel;
 
 class CategoryController extends Controller
 {
@@ -16,6 +17,19 @@ class CategoryController extends Controller
         $request->validate([
             "categoryName" => "required|min:3|max:255"
         ]);
-        dd($request->all());
+        if(CategoryModel::addCategory($request))
+        {
+            return view('layout.item.addType.result', [
+                "result" => true,
+                "message" => "Categoria adicionada com sucesso!"
+            ]);
+        }
+        else
+        {
+            return view('layout.item.addType.result', [
+                "result" => false,
+                "message" => "Falha na adição de categoria!"
+            ]);
+        }
     }
 }
