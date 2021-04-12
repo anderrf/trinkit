@@ -7,10 +7,18 @@ use App\Http\Controllers\CategoryController;
 
 class ListController extends Controller
 {
-    public function showList()
+    public function showCategoryList()
     {
         return view('layout.item.list', [
             "categories" => $this->getCategories() ? $this->getCategories() : null
+        ]);
+    }
+
+    public function showObjectsByCategory($categoryId)
+    {
+        return view('layout.item.objectList.objectList', [
+            "categories" => $this->getCategories() ? $this->getCategories() : null,
+            "categoryId" => $categoryId
         ]);
     }
 

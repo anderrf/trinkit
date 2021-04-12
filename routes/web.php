@@ -15,7 +15,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::redirect('/', '/lista');
 
-Route::get('/lista', 'App\Http\Controllers\ListController@showList')->name('list');
+Route::prefix('/lista')->group(function(){
+
+    Route::get('/', 'App\Http\Controllers\ListController@showCategoryList');
+
+    Route::get('/{categoryId}', 'App\Http\Controllers\ListController@showObjectsByCategory');
+
+});
 
 Route::prefix('adicionar')->group(function () {
 
