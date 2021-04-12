@@ -43,6 +43,13 @@ class ObjectController extends Controller
 
     public static function getObjects(int $categoryId, int $limit)
     {
-
+        $objects = ObjectModel::listObjects($categoryId ,$limit);
+        if($objects)
+        {
+            return $objects;
+        }
+        else
+        {
+        }
     }
 }

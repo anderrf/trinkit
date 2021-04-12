@@ -18,6 +18,7 @@ class ListController extends Controller
     {
         return view('layout.item.objectList.objectList', [
             "categories" => $this->getCategories() ? $this->getCategories() : null,
+            "objects" => $this->getObjects($categoryId) ? $this->getObjects($categoryId) : null,
             "categoryId" => $categoryId
         ]);
     }
@@ -26,5 +27,11 @@ class ListController extends Controller
     {
         $categories = CategoryController::getCategories(10);
         return $categories;
+    }
+
+    public function getObjects($categoryId)
+    {
+        $objects = ObjectController::getObjects($categoryId, 50);
+        return $objects;
     }
 }

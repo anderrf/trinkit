@@ -12,7 +12,7 @@ class ObjectModel extends Model
     protected $connection = 'sqlite';
     protected $table = 'tb_Object';
 
-    public static function listObject(int $limit)
+    public static function listObjects(int $categoryId, int $limit)
     {
         $sql = self::select([
             "cd_Object",
@@ -20,7 +20,7 @@ class ObjectModel extends Model
             "yy_Object",
             "ds_ObjectPhoto",
             "id_Category"
-        ])
+        ])->where("id_Category", "=", $categoryId)
         ->limit($limit);
 
         return $sql->get();
