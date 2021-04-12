@@ -9,16 +9,16 @@
         <div class="col-md-2">
             <aside>
                 <ul class="nav flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="true" href="#">Pedras</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Anéis</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Miniaturas</a>
-                    </li>
-                    <li class="nav-item"><a href="/adicionar/categoria" class="nav-link"><i class="bi bi-plus"></i></a></li>
+                    @if($categories)
+                        @foreach($categories as $category)
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="true" href="#" data-categoryId="{{ $category->cd_Category }}">{{ $category->nm_Category }}</a>
+                            </li>
+                        @endforeach
+                        @if(count($categories) < 10)
+                            <li class="nav-item"><a href="/adicionar/categoria" class="nav-link"><i class="bi bi-plus"></i></a></li>
+                        @endif
+                    @endif
                 </ul>
             </aside>
         </div>

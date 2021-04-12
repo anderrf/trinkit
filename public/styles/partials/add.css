@@ -23,3 +23,10 @@ fieldset label, .form-control{
 form button i{
     font-size: 2rem;
 }
+
+/*result*/
+.positive, .negative{
+    display: block;
+    justify-content: center;
+    text-align: center;
+}

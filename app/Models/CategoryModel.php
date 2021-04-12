@@ -12,7 +12,7 @@ class CategoryModel extends Model
     protected $connection = 'sqlite';
     protected $table = 'tb_Category';
 
-    public static function listCategory(int $limit)
+    public static function listCategories(int $limit)
     {
         $sql = self::select([
             "cd_Category",
@@ -20,7 +20,7 @@ class CategoryModel extends Model
         ])
         ->limit($limit);
 
-        dd($sql->toSql());
+        return $sql->get();
     }
 
     public static function addCategory(Request $request)

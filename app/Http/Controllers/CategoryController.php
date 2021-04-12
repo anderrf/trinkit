@@ -32,4 +32,17 @@ class CategoryController extends Controller
             ]);
         }
     }
+
+    public static function getCategories(int $limit)
+    {
+        $categories = CategoryModel::listCategories($limit);
+        if($categories)
+        {
+            return $categories;
+        }
+        else
+        {
+            
+        }
+    }
 }
