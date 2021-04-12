@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+    {{-- Retorno à raíz do site --}}
     <div class="row mt-3 mb-3">
         <div class="col-md-2">
             <a href="/" class="back-add nav-link">
@@ -14,6 +15,7 @@
     </div>
     <div class="row">
         <div class="col-md-12">
+            {{-- Views de cadastro ou resultado --}}
             @yield('addType')
         </div>
     </div>

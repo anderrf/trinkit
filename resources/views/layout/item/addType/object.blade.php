@@ -36,6 +36,7 @@
                     @endif
                 </div>
             </div>
+            <input type="hidden" value="{{ $categoryId }}" name="categoryId" id="categoryId">
         </fieldset>
         <div class="mb-3 mt-3">
             <button type="submit" class="btn btn-success">

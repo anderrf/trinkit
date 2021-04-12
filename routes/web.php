@@ -27,7 +27,7 @@ Route::prefix('adicionar')->group(function () {
 
     Route::redirect('/', '/');
 
-    Route::get('/objeto', 'App\Http\Controllers\ObjectController@addObject')->name('addObject');
+    Route::get('/objeto/{categoryId}', 'App\Http\Controllers\ObjectController@addObject')->name('addObject');
 
     Route::get('/categoria', 'App\Http\Controllers\CategoryController@addCategory')->name('addCategory');
 

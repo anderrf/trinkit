@@ -9,14 +9,17 @@ class CategoryController extends Controller
 {
     public function addCategory()
     {
+        //Retorna view com form de adição de categoria
         return view('layout.item.addType.category');
     }
 
     public function saveCategory(Request $request)
     {
+        //Valida valores recebidos dos inputs de adicionar/objeto
         $request->validate([
             "categoryName" => "required|min:3|max:255"
         ]);
+        //Usa o método de salvar da model, e retorna bool para mostra de resultado
         if(CategoryModel::addCategory($request))
         {
             return view('layout.item.addType.result', [
