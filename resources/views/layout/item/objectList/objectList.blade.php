@@ -25,3 +25,13 @@
     @endif
 @endsection
 
+@section('categoryDeleteButton')
+    <div class="row mt-3">
+        <div class="col-md-10"></div>
+        <div class="col-md-2 mt-3 d-grid gap-2">
+            <a href="/deletar/categoria/{{ $categoryId }}" class="btn btn-danger btn-lg">
+                <i class="bi bi-x fs-2"></i>
+            </a>
+        </div>
+    </div>
+@endsection

@@ -48,4 +48,22 @@ class CategoryController extends Controller
             
         }
     }
+
+    public function deleteCategory(int $categoryId)
+    {
+        if(CategoryModel::deleteCategory($categoryId))
+        {
+            return view('layout.item.addType.result', [
+                "result" => true,
+                "message" => "Categoria deletada com sucesso!"
+            ]);
+        }
+        else
+        {
+            return view('layout.item.addType.result', [
+                "result" => false,
+                "message" => "Falha na deleção de categoria!"
+            ]);
+        }
+    }
 }

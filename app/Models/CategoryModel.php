@@ -31,4 +31,10 @@ class CategoryModel extends Model
         ]);
         //dd(DB::getQueryLog());
     }
+
+    public static function deleteCategory($categoryId)
+    {
+        //Categoria deletada localizada pelo $categoryId
+        return $sql = self::where("cd_Category", "=", $categoryId)->delete();
+    }
 }

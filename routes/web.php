@@ -49,4 +49,6 @@ Route::prefix('deletar')->group(function(){
 
     Route::get('/objeto/{objectId}', 'App\Http\Controllers\ObjectController@deleteObject')->name('deleteObject');
 
+    Route::get('/categoria/{categoryId}', 'App\Http\Controllers\CategoryController@deleteCategory')->name('deleteCategory');
+
 });

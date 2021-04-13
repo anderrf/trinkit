@@ -38,6 +38,7 @@ class ObjectModel extends Model
 
     public static function deleteObject($objectId)
     {
+        //Objeto deletado localizado pelo $objectId
         return $sql = self::where("cd_Object", "=", $objectId)->delete();
     }
 }

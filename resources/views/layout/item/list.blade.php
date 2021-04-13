@@ -29,6 +29,7 @@
                 {{-- Objetos a serem listados quando selecionada a categoria --}}
                 @yield('objects')
             </div>
+            @yield('categoryDeleteButton')
         </div>
     </div>
 @endsection
