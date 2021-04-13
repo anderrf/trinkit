@@ -52,4 +52,22 @@ class ObjectController extends Controller
         {
         }
     }
+
+    public function deleteObject(int $objectId)
+    {
+        if(ObjectModel::deleteObject($objectId))
+        {
+            return view('layout.item.addType.result', [
+                "result" => true,
+                "message" => "Objeto deletado com sucesso!"
+            ]);
+        }
+        else
+        {
+            return view('layout.item.addType.result', [
+                "result" => false,
+                "message" => "Falha na deleção de objeto!"
+            ]);
+        }
+    }
 }

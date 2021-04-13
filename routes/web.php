@@ -42,3 +42,11 @@ Route::prefix('salvar')->group(function(){
     Route::post('/categoria', 'App\Http\Controllers\CategoryController@saveCategory')->name('saveCategory');
 
 });
+
+Route::prefix('deletar')->group(function(){
+
+    Route::redirect('/', '/');
+
+    Route::get('/objeto/{objectId}', 'App\Http\Controllers\ObjectController@deleteObject')->name('deleteObject');
+
+});

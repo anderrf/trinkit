@@ -35,4 +35,9 @@ class ObjectModel extends Model
             "id_Category" => $request->input('categoryId')
         ]);
     }
+
+    public static function deleteObject($objectId)
+    {
+        return $sql = self::where("cd_Object", "=", $objectId)->delete();
+    }
 }

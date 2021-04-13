@@ -8,7 +8,7 @@
                 <div class="card-body">
                     <h3 class="card-title">{{ $object->nm_Object }}</h3>
                     <p class="card-text text-muted">{{ $object->yy_Object }}</p>
-                    <a href="#" class="btn btn-danger">
+                    <a href="/deletar/objeto/{{ $object->cd_Object }}" class="btn btn-danger">
                         <i class="bi bi-trash-fill"></i>
                     </a>
                 </div>
